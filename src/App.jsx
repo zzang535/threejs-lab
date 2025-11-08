@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   useLocation,
 } from "react-router-dom";
 
@@ -29,74 +28,206 @@ function App() {
   return (
     <>
       {location.pathname == "/" && (
-        <div className="bg-gray-300 p-4">
-          <div>
-            <Link to="/CustomModelLoad">
-              [커스텀 모델 로드 (CustomModelLoad)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/CustomModelAnimation">
-              [커스텀 모델 애니메이션 (CustomModelAnimation)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/PhysicsEngineWorld">
-              [물리엔진 월드 생성 (PhysicsEngineWorld)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/ContactMaterial">
-              [재질에 다른 마찰력과 반발력 (Contact Material)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/Force">[힘 (Force) - 화면을 클릭]</Link>
-          </div>
-          <div>
-            <Link to="/RandomPositionBallCreate">
-              [랜덤 위치에 공 생성하기 (RandomPositionBallCreate) - 화면을 클릭]
-            </Link>
-          </div>
-          <div>
-            <Link to="/CollisionSound">[충돌 사운드 (CollisionSound)]</Link>
-          </div>
-          <div>
-            <Link to="/ObjectRemove">
-              [오브젝트 제거 (ObjectRemove) - 화면을 클릭, 삭제버튼 클릭]
-            </Link>
-          </div>
-          <div>
-            <Link to="/Domino">[도미노 (Domino)]</Link>
-          </div>
-          <div>
-            <Link to="/BasicGeometryParticle">
-              [기본 지오메트리 파티클 (BasicGeometryParticle)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/RandomParticle">[랜덤 파티클 (RandomParticle)]</Link>
-          </div>
-          <div>
-            <Link to="/ParticleImage">[파티클 이미지(ParticleImage)]</Link>
-          </div>
-          <div>
-            <Link to="/VariousColorParticle">
-              [여러가지 색의 파티클 (VariousColorParticle)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/PointCoordinatesMesh">
-              [포인트 좌표에 메쉬 생성하기 (PointCoordinatesMesh)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/FormatChangingImagePanel">
-              [형태가 바뀌는 이미지 패널 만들기 (FormatChangingImagePanel)]
-            </Link>
-          </div>
-          <div>
-            <Link to="/ScrollPage">[스크롤 페이지 (ScrollPage)]</Link>
+        <div className="min-h-screen bg-gray-50 p-8">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">
+              Three.js Lab
+            </h1>
+            <p className="text-gray-600 mb-8">
+              Three.js 학습 예제 모음
+            </p>
+
+            <div className="space-y-3">
+              <a
+                href="/CustomModelLoad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  커스텀 모델 로드
+                </h3>
+                <p className="text-sm text-gray-500">Custom Model Load</p>
+              </a>
+
+              <a
+                href="/CustomModelAnimation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  커스텀 모델 애니메이션
+                </h3>
+                <p className="text-sm text-gray-500">Custom Model Animation</p>
+              </a>
+
+              <a
+                href="/PhysicsEngineWorld"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  물리엔진 월드
+                </h3>
+                <p className="text-sm text-gray-500">Physics Engine World</p>
+              </a>
+
+              <a
+                href="/ContactMaterial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  재질별 마찰력과 반발력
+                </h3>
+                <p className="text-sm text-gray-500">Contact Material</p>
+              </a>
+
+              <a
+                href="/Force"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">힘</h3>
+                <p className="text-sm text-gray-500">Force - 화면을 클릭해보세요</p>
+              </a>
+
+              <a
+                href="/RandomPositionBallCreate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  랜덤 위치 공 생성
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Random Ball - 화면을 클릭해보세요
+                </p>
+              </a>
+
+              <a
+                href="/CollisionSound"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">충돌 사운드</h3>
+                <p className="text-sm text-gray-500">Collision Sound</p>
+              </a>
+
+              <a
+                href="/ObjectRemove"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  오브젝트 제거
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Object Remove - 클릭 & 삭제버튼
+                </p>
+              </a>
+
+              <a
+                href="/Domino"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">도미노</h3>
+                <p className="text-sm text-gray-500">Domino</p>
+              </a>
+
+              <a
+                href="/BasicGeometryParticle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  기본 지오메트리 파티클
+                </h3>
+                <p className="text-sm text-gray-500">Basic Geometry Particle</p>
+              </a>
+
+              <a
+                href="/RandomParticle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">랜덤 파티클</h3>
+                <p className="text-sm text-gray-500">Random Particle</p>
+              </a>
+
+              <a
+                href="/ParticleImage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  파티클 이미지
+                </h3>
+                <p className="text-sm text-gray-500">Particle Image</p>
+              </a>
+
+              <a
+                href="/VariousColorParticle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  여러가지 색의 파티클
+                </h3>
+                <p className="text-sm text-gray-500">Various Color Particle</p>
+              </a>
+
+              <a
+                href="/PointCoordinatesMesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  포인트 좌표에 메쉬 생성
+                </h3>
+                <p className="text-sm text-gray-500">Point Coordinates Mesh</p>
+              </a>
+
+              <a
+                href="/FormatChangingImagePanel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  형태가 바뀌는 이미지 패널
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Format Changing Image Panel
+                </p>
+              </a>
+
+              <a
+                href="/ScrollPage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  스크롤 페이지
+                </h3>
+                <p className="text-sm text-gray-500">Scroll Page</p>
+              </a>
+            </div>
           </div>
         </div>
       )}
