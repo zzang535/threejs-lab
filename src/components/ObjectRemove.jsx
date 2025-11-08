@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import * as CANNON from "cannon-es";
 import { PreventDragClick } from "../utils/PreventDragClick";
 import { MySphere } from "../utils/MySphere";
-import mySound from "../assets/boing.mp3";
+import mySound from "../sounds/boing.mp3";
 
 // ----- 주제: ObjectRemove
 // 오브젝트 제거

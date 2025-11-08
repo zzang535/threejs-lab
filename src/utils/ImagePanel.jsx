@@ -1,7 +1,7 @@
 import { MeshBasicMaterial, DoubleSide, Mesh } from "three";
 
 // 특정 폴더 이미지 전체 import
-const images = import.meta.glob("../assets/randomImages/*.jpg");
+const images = import.meta.glob("../images/randomImages/*.jpg");
 
 // import 된 이미지들 중에 랜덤으로 1개의 src 리턴
 async function getRandomImage(images) {

@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { useEffect, useRef } from "react";
-import starImage from "../assets/star.png";
+import starImage from "../images/star.png";
 
 // ----- 주제: 여러가지 색의 파티클
 // VariousColorParticle

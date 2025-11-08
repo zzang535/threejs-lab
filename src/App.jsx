@@ -22,6 +22,7 @@ import VariousColorParticle from "./components/VariousColorParticle";
 import PointCoordinatesMesh from "./components/PointCoordinatesMesh";
 import FormatChangingImagePanel from "./components/FormatChangingImagePanel";
 import ScrollPage from "./components/ScrollPage";
+import SteppingStoneGame from "./components/SteppingStoneGame";
 
 function App() {
   const location = useLocation();
@@ -227,6 +228,18 @@ function App() {
                 </h3>
                 <p className="text-sm text-gray-500">Scroll Page</p>
               </a>
+
+              <a
+                href="/SteppingStoneGame"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-gray-400 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-medium text-gray-800">
+                  징검다리 건너기 게임
+                </h3>
+                <p className="text-sm text-gray-500">Stepping Stone Game</p>
+              </a>
             </div>
           </div>
         </div>
@@ -269,6 +282,10 @@ function App() {
           element={<FormatChangingImagePanel />}
         ></Route>
         <Route path="/ScrollPage" element={<ScrollPage />}></Route>
+        <Route
+          path="/SteppingStoneGame"
+          element={<SteppingStoneGame />}
+        ></Route>
       </Routes>
     </>
   );

@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { PreventDragClick } from "../utils/PreventDragClick";
 import { Domino } from "../utils/Domino";
-import mySound from "../assets/boing.mp3";
+import mySound from "../sounds/boing.mp3";
 
 // ----- 주제: Domino
 // 도미노

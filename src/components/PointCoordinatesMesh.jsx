@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { useEffect, useRef } from "react";
-import starImage from "../assets/star.png";
+import starImage from "../images/star.png";
 
 // ----- 주제: 포인트 좌표에 메쉬 생성하기
 // PointCoordinatesMesh
