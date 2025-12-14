@@ -47,7 +47,8 @@ export default function Component() {
 
     // gltf loader
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load("/models/ilbuni.glb", (gltf) => {
+    gltfLoader.load("/models/ilbuni-with-animation.glb", (gltf) => {
+      console.log(gltf);
       console.log(gltf.scene.children[0]);
       const ilbuniMesh = gltf.scene.children[0];
       scene.add(ilbuniMesh);

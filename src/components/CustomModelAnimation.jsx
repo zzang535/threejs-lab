@@ -51,7 +51,7 @@ export default function CustomModelAnimation() {
     const gltfLoader = new GLTFLoader();
     let mixer;
 
-    gltfLoader.load("/models/ilbuni.glb", (gltf) => {
+    gltfLoader.load("/models/ilbuni-with-animation.glb", (gltf) => {
       console.log(gltf.scene.children[0]);
       const ilbuniMesh = gltf.scene.children[0];
       scene.add(ilbuniMesh);
@@ -63,7 +63,7 @@ export default function CustomModelAnimation() {
       actions[1] = mixer.clipAction(gltf.animations[1]);
       actions[0].repetitions = 2; // 반복 회수 설정
       actions[0].clampWhenFinished = true; // 애니메이션 끝난 상태에서 멈추도록 하기
-      actions[0].play();
+      actions[1].play();
     });
 
     // 그리기
